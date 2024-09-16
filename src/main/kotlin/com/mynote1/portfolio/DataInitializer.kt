@@ -71,8 +71,8 @@ class DataInitializer(
 
         // link 초기화
         val links = mutableListOf<Link>(
-            Link(name = "Github", content = "https://github.com/infomuscle", isActive = true),
-            Link(name = "Linkedin", content = "https://www.linkedin.com/in/bokeunjeong", isActive = true),
+            Link(name = "Github", content = "https://github.com/junghyun13", isActive = true),
+            Link(name = "Linkedin", content = "https://www.linkedin.com/in/%EC%A0%95%ED%98%84-%EC%9D%B4-1343b9329/", isActive = true),
         )
         linkRepository.saveAll(links)
 
