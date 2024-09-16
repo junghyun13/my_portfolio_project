@@ -32,9 +32,14 @@ class Experience(
 
     var isActive: Boolean = isActive
 
-    @OneToMany(targetEntity = ExperienceDetail::class, fetch = FetchType.LAZY, cascade = [CascadeType.ALL]) //영속성
+    @OneToMany(
+        targetEntity = ExperienceDetail::class,
+        fetch = FetchType.LAZY,
+        cascade = [CascadeType.ALL]
+    ) //영속성 jpa에서 proxy를 쓰는데 이것은 가짜객체라고봄
     @JoinColumn(name = "experience_id")
-    var details: MutableList<ExperienceDetail> = mutableListOf()
+    var details: MutableList<ExperienceDetail> =
+        mutableListOf() //Detail를 가짜 객체로 매핑을 함 위의 LAZY가 가짜 객체를 가지고 있고 호출이되고 쿼리가 오면 호출
 
     fun getEndYearMonth(): String {
         if (endYear == null || endMonth == null) {

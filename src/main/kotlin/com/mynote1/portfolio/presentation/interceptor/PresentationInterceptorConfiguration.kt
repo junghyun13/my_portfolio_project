@@ -1,0 +1,6 @@
+package com.mynote1.portfolio.presentation.interceptor
+
+import org.springframework.context.annotation.Configuration
+
+@Configuration
+class PresentationInterceptorConfiguration
