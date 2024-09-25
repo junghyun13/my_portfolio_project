@@ -1,15 +1,7 @@
 package com.mynote1.portfolio
 
 import com.mynote1.portfolio.domain.constant.SkillType
-import com.mynote1.portfolio.domain.entity.Achievement
-import com.mynote1.portfolio.domain.entity.Experience
-import com.mynote1.portfolio.domain.entity.ExperienceDetail
-import com.mynote1.portfolio.domain.entity.Introduction
-import com.mynote1.portfolio.domain.entity.Link
-import com.mynote1.portfolio.domain.entity.Project
-import com.mynote1.portfolio.domain.entity.ProjectDetail
-import com.mynote1.portfolio.domain.entity.ProjectSkill
-import com.mynote1.portfolio.domain.entity.Skill
+import com.mynote1.portfolio.domain.entity.*
 
 import com.mynote1.portfolio.domain.repository.AchievementRepository
 import com.mynote1.portfolio.domain.repository.ExperienceRepository
@@ -17,6 +9,8 @@ import com.mynote1.portfolio.domain.repository.IntroductionRepository
 import com.mynote1.portfolio.domain.repository.LinkRepository
 import com.mynote1.portfolio.domain.repository.ProjectRepository
 import com.mynote1.portfolio.domain.repository.SkillRepository
+import com.mynote1.portfolio.domain.repository.AccountRepository
+
 import jakarta.annotation.PostConstruct
 import org.slf4j.LoggerFactory
 import org.springframework.context.annotation.Profile
@@ -31,7 +25,8 @@ class DataInitializer(
     private val introductionRepository: IntroductionRepository,
     private val linkRepository: LinkRepository,
     private val projectRepository: ProjectRepository,
-    private val skillRepository: SkillRepository
+    private val skillRepository: SkillRepository,
+    private val accountRepository: AccountRepository
 
 ) {
 
@@ -47,7 +42,7 @@ class DataInitializer(
             Achievement(
                 title = "교내로봇대회참여",
                 description = "아두이노를 활용한 자율주행로봇",
-                host = "캣카오",
+                host = "수원대",
                 achievedDate = LocalDate.of(2024, 11, 13),
                 isActive = true
             ),
@@ -158,7 +153,7 @@ class DataInitializer(
             mutableListOf(
                 ProjectDetail(content = "PIL(Pillow) 활용하여 이미지 분석 기능 개발", url = null, isActive = true),
                 ProjectDetail(content = "알림 발송을 비동기 처리하여 이미지 분석 - 알림 발송 기능간 의존도 감소", url = null, isActive = true),
-                ProjectDetail(content = "Github Repository", url = "https://github.com/infomuscle", isActive = true)
+                ProjectDetail(content = "Github Repository", url = "https://github.com/junghyun13", isActive = true)
             )
         )
         project2.skills.addAll(
@@ -169,7 +164,11 @@ class DataInitializer(
             )
         )
         projectRepository.saveAll(mutableListOf(project1, project2))
-
+        val account = Account(
+            loginId = "admin1",
+            pw = "\$2a\$10\$BWi6SLqZRJyVvJyufjTtHeYXNNhpNY9rxaVl9fBOE.1t3QF98B.cO"
+        )
+        accountRepository.save(account)
 
     }
 }
