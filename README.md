@@ -1,0 +1,11 @@
+프로젝트 각 기능별 구현화면 
+![포트폴리오1-1](https://github.com/user-attachments/assets/00ecab5f-b74a-4093-ac2e-c9bcfee8e0d8)
+![포트폴리오1-2](https://github.com/user-attachments/assets/3f337240-9b80-4dd7-b351-5e7b6113d932)
+![포트폴리오1-3](https://github.com/user-attachments/assets/03e188ac-6daf-4d56-ab3d-8a33db024b36)
+![포트폴리오1-4](https://github.com/user-attachments/assets/14287af0-dff8-4234-85e3-ad6071b9e231)
+![포트폴리오1-5](https://github.com/user-attachments/assets/de607a0a-5efe-4674-81e0-e664f33469a5)
+![포트폴리오1-6](https://github.com/user-attachments/assets/fb468a0d-d439-43b6-b6d7-34a3dc3814e9)
+![포트폴리오1-7](https://github.com/user-attachments/assets/336b0c95-aaec-473c-a189-8be4dd6d4956)
+![포트폴리오1-8](https://github.com/user-attachments/assets/9b7fa5a5-e1ce-4f17-be37-7a0574935ed4)
+![포트폴리오1-9](https://github.com/user-attachments/assets/73003b2e-a0bd-4196-94d9-10cdac03602d)
+![포트폴리오1-10](https://github.com/user-attachments/assets/9225168b-b65c-4440-b7be-1ea4751afdf7)
