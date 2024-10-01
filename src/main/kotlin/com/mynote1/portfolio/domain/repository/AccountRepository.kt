@@ -6,6 +6,6 @@ import java.util.*
 
 interface AccountRepository : JpaRepository<Account, Long> {
 
-    fun findByLoginId(loginId: String): Optional<Account>
-
+    fun findFirstByLoginId(loginId: String): Optional<Account>
+    //findByLoginId
 }

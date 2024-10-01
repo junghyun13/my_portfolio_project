@@ -11,7 +11,7 @@ class AdminSecurityService(
     private val accountRepository: AccountRepository
 ) : UserDetailsService {
     override fun loadUserByUsername(loginId: String): UserDetails {
-        return accountRepository.findByLoginId(loginId)
+        return accountRepository.findFirstByLoginId(loginId)
             .orElseThrow { throw AdminBadReqeustException("사용자 정보를 찾을 수 없습니다.") }
     }
-}
+} //findByLoginId
