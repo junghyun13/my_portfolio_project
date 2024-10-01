@@ -88,18 +88,18 @@ class DataInitializer(
             )
         )
         val experience2 = Experience(
-            title = "주식회사 캣카오(Catkao Corp.)",
-            description = "소셜서비스팀 백엔드 개발자",
-            startYear = 2022,
-            startMonth = 9,
+            title = "it동아리 FLAG",
+            description = "알고라즘 공부",
+            startYear = 2023,
+            startMonth = 4,
             endYear = null,
             endMonth = null,
             isActive = true
         )
         experience2.addDetails(
             mutableListOf(
-                ExperienceDetail(content = "유기묘 위치 공유 서비스 개발", isActive = true),
-                ExperienceDetail(content = "신입 교육 프로그램 우수상 수상", isActive = true)
+                ExperienceDetail(content = "crud 기능 게시판 만들기", isActive = true),
+                //ExperienceDetail(content = "신입 교육 프로그램 우수상 수상", isActive = true)
             )
         )
         experienceRepository.saveAll(mutableListOf(experience1, experience2))
@@ -118,18 +118,18 @@ class DataInitializer(
         // project / project_detail / project_skill 초기화
 
         val project1 = Project(
-            name = "유기묘 발견 정보 공유 서비스",
-            description = "유기묘 위치의 실시간 공유, 임시보호까지 연결해주는 서비스. 구글 맵스를 연동하여 유기묘 위치 정보를 직관적으로 파악할 수 있도록 하는 사용자 경험 개선 작업.",
-            startYear = 2022,
-            startMonth = 9,
-            endYear = 2022,
+            name = "인공지능을 이용한 음성인식 키오스크",
+            description = "음성인식을 활용한 음료, 음식을 선택할 수 있도록 맞춤형 키오스크 기획파트 담당",
+            startYear = 2023,
+            startMonth = 4,
+            endYear = 2023,
             endMonth = 12,
             isActive = true
         )
         project1.addDetails(
             mutableListOf(
-                ProjectDetail(content = "구글 맵스를 활용한 유기묘 발견 지역 정보 제공 API 개발", url = null, isActive = true),
-                ProjectDetail(content = "Redis 적용하여 인기 게시글의 조회 속도 1.5초 → 0.5초로 개선", url = null, isActive = true)
+                ProjectDetail(content = "구글의 speech to text기능을 활용한 얼굴인식+음성인식", url = null, isActive = true),
+                ProjectDetail(content = "사용자 나이에 맞게 ui/ux의 글자 크기 선호도 음료, 음식을 선택할 수 있게 기획", url = null, isActive = true)
             )
         )
         project1.skills.addAll(
@@ -141,18 +141,18 @@ class DataInitializer(
             )
         )
         val project2 = Project(
-            name = "반려동물 홈 카메라 움직임 감지 분석 모듈",
-            description = "카메라에서 서버로 전달되는 신호를 분석하여 움직임이 감지될 경우 클라이언트에게 알림 발송 작업.",
-            startYear = 2022,
-            startMonth = 12,
+            name = "crud 기능 게시판 만들기",
+            description = "스프링부트를 사용해서 처음으로 구현",
+            startYear = 2024,
+            startMonth = 9,
             endYear = null,
             endMonth = null,
             isActive = true
         )
         project2.addDetails(
             mutableListOf(
-                ProjectDetail(content = "PIL(Pillow) 활용하여 이미지 분석 기능 개발", url = null, isActive = true),
-                ProjectDetail(content = "알림 발송을 비동기 처리하여 이미지 분석 - 알림 발송 기능간 의존도 감소", url = null, isActive = true),
+                ProjectDetail(content = "mysql활용", url = null, isActive = true),
+                ProjectDetail(content = "스프링부트 개념에 대한 이해", url = null, isActive = true),
                 ProjectDetail(content = "Github Repository", url = "https://github.com/junghyun13", isActive = true)
             )
         )
